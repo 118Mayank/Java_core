@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 
 public class My_calci extends Frame implements ActionListener {
 	TextField t;
-	TextArea ta;
+
 	Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11,
 			button12, button13, button14, button15, button16, button17, button18, button19, button20;
 	static double a = 0, b = 0, result = 0;
@@ -16,7 +16,6 @@ public class My_calci extends Frame implements ActionListener {
 	public My_calci() {
 		setLayout(null);
 		t = new TextField();
-		ta = new TextArea();
 
 		button1 = new Button("C");
 		button2 = new Button("CE");
@@ -39,28 +38,27 @@ public class My_calci extends Frame implements ActionListener {
 		button19 = new Button(".");
 		button20 = new Button("=");
 
-		ta.setBounds(15, 40, 400, 150);
-		t.setBounds(15, 195, 400, 45);
-		button1.setBounds(15, 250, 100, 25);
-		button2.setBounds(115, 250, 100, 25);
-		button3.setBounds(215, 250, 100, 25);
-		button4.setBounds(315, 250, 100, 25);
-		button5.setBounds(15, 275, 100, 25);
-		button6.setBounds(115, 275, 100, 25);
-		button7.setBounds(215, 275, 100, 25);
-		button8.setBounds(315, 275, 100, 25);
-		button9.setBounds(15, 300, 100, 25);
-		button10.setBounds(115, 300, 100, 25);
-		button11.setBounds(215, 300, 100, 25);
-		button12.setBounds(315, 300, 100, 25);
-		button13.setBounds(15, 325, 100, 25);
-		button14.setBounds(115, 325, 100, 25);
-		button15.setBounds(215, 325, 100, 25);
-		button16.setBounds(315, 325, 100, 25);
-		button17.setBounds(115, 350, 100, 25);
-		button18.setBounds(215, 350, 100, 25);
-		button19.setBounds(15, 350, 100, 25);
-		button20.setBounds(315, 350, 100, 25);
+		t.setBounds(15, 50, 400, 45);
+		button1.setBounds(15, 100, 100, 25);
+		button2.setBounds(115, 100, 100, 25);
+		button3.setBounds(215, 100, 100, 25);
+		button4.setBounds(315, 100, 100, 25);
+		button5.setBounds(15, 125, 100, 25);
+		button6.setBounds(115, 125, 100, 25);
+		button7.setBounds(215, 125, 100, 25);
+		button8.setBounds(315, 125, 100, 25);
+		button9.setBounds(15, 150, 100, 25);
+		button10.setBounds(115, 150, 100, 25);
+		button11.setBounds(215, 150, 100, 25);
+		button12.setBounds(315, 150, 100, 25);
+		button13.setBounds(15, 175, 100, 25);
+		button14.setBounds(115, 175, 100, 25);
+		button15.setBounds(215, 175, 100, 25);
+		button16.setBounds(315, 175, 100, 25);
+		button17.setBounds(115, 200, 100, 25);
+		button18.setBounds(215, 200, 100, 25);
+		button19.setBounds(15, 200, 100, 25);
+		button20.setBounds(315, 200, 100, 25);
 
 		button1.addActionListener(this);
 		button2.addActionListener(this);
@@ -84,7 +82,6 @@ public class My_calci extends Frame implements ActionListener {
 		button20.addActionListener(this);
 
 		add(t);
-		add(ta);
 		add(button1);
 		add(button2);
 		add(button3);
@@ -107,7 +104,7 @@ public class My_calci extends Frame implements ActionListener {
 		add(button20);
 
 		setTitle("My Calculator");
-		setSize(435, 400);
+		setSize(430, 250);
 		setVisible(true);
 
 		addWindowListener(new WindowAdapter() {
@@ -221,12 +218,11 @@ public class My_calci extends Frame implements ActionListener {
 					t.setText(t.getText() + s.charAt(i));
 			}
 		}
-		ta.append(e.getSource() + "\n");
 	}
 
 	public void paint(Graphics g) {
 		g.setColor(Color.blue);
-		g.fillRect(0, 0, 500, 400);
+		g.fillRect(0, 0, 430, 250);
 	}
 
 	public static void main(String arg[]) {
